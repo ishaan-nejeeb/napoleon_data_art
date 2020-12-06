@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>napoleon_data_art</title>
+
+        <style>
+            @font-face {
+                font-family: "Argesta-Display";
+                src: url("./assets/fonts/Argesta_Webfont/argestadisplay-regular-webfont.eot");
+                src: url("./assets/fonts/Argesta_Webfont/argestadisplay-regular-webfont.eot?#iefix")
+                        format("embedded-opentype"),
+                    url("./assets/fonts/Argesta_Webfont/argestadisplay-regular-webfont.woff")
+                        format("woff"),
+                    url("./assets/fonts/Argesta_Webfont/argestadisplau-regular-webfont.ttf")
+                        format("truetype"),
+                    url("fonts/on-air-inline-webfont.svg#On-AirInline")
+                        format("svg");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                /* overflow: hidden; */
+            }
+
+            .heading {
+                /* width: 100%; */
+                height: 100vh;
+                padding: 0rem 4rem;
+                display: flex;
+                flex-direction: column;
+                background-color: #666666;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .heading h1 {
+                font-family: "Argesta-Display";
+                font-size: 3rem;
+                color: white;
+            }
+
+            .heading p {
+                font-family: "Argesta-Display";
+                font-size: 1rem;
+                color: white;
+            }
+
+            .heading h6 {
+                font-family: "Argesta-Display";
+                font-size: 14px;
+                color: white;
+            }
+
+            #canvasContainer {
+                padding: 0;
+                margin: 0;
+            }
+
+            canvas {
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Napoleon's Russian Campaign of 1812-1813</h1>
+            <p>
+                This interactive visualization attempts to show Charles Minard's
+                original map of Napoleon's Russian Campaign in the form of an
+                interactive narrative. The number of soldiers left in main army
+                are represented my green circles (color of Napoleon's army
+                uniforms) rushing about the scene. Each circle represents 1000
+                soldier. The background also changes depending on whether the
+                Grand Army is attacking (
+                <span
+                    style="
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #d9b950;
+                    "
+                ></span>
+                ) or retreating (
+                <span
+                    style="
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #401414;
+                    "
+                ></span>
+                ). Press the right arrow key to go a step forwrd in time and the
+                left arrow key to go backward in time. Each step is also
+                accompanied by a descriptive text.
+            </p>
+            <h6>Scroll down to see visualization</h6>
+        </div>
+
+        <div id="canvasContainer"></div>
+
+        <script src="libraries/p5.js"></script>
+        <script src="libraries/p5.dom.js"></script>
+        <script src="libraries/p5.sound.js"></script>
+        <script src="data.js"></script>
+        <script src="particle.js"></script>
+        <script src="sketch.js"></script>
+    </body>
+</html>
